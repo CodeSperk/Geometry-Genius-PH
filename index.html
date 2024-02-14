@@ -46,15 +46,19 @@
             <h2 class="card-title text-2xl font-bold">Triangle</h2>
             <p class="text-gray-700">Area(A) = 0.5 x b x h</p>
             
-            <div class="flex gap-4 mt-4 mb-12">
+            <div class="flex gap-4 mt-4">
               <div class="flex items-center gap-2">
-                <input type="text" name="base" id="base" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="base"> <span>CM</span>
+                <input id="triangle-base" type="text" name="base" id="base" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="base"> <span>CM</span>
               </div>
               <div class="flex items-center gap-2">
-                <input type="text" name="height" id="height" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="height"> <span>CM</span>
+                <input id="triangle-height" type="text" name="height" id="height" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="height"> <span>CM</span>
               </div>
             </div>
-              <button class="btn btn-info w-full text-white text-lg">Calculate</button>
+            <div class="mt-6">
+              <p>Area : <span id="triangle-area">0 </span> CM<sup>2</sup></p>
+            </div>
+            
+              <button onclick="triangleArea()" class="btn btn-info w-full text-white text-lg">Calculate</button>
            
           </div>
         </div>
@@ -68,15 +72,19 @@
             <h2 class="card-title text-2xl font-bold">Rectangle</h2>
             <p class="text-gray-700">Area(A) = 0.5 x w x l</p>
             
-            <div class="flex gap-4 mt-4 mb-12">
+            <div class="flex gap-4 mt-4">
               <div class="flex items-center gap-2">
-                <input type="text" name="width" id="width" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="width"> <span>CM</span>
+                <input type="text" name="width" id="rectangle-width" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="width"> <span>CM</span>
               </div>
               <div class="flex items-center gap-2">
-                <input type="text" name="length" id="length" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="length"> <span>CM</span>
+                <input type="text" name="length" id="rectangle-length" class="py-2 px-3 max-w-20 bg-[#F1F1F1] rounded-md outline-none" placeholder="length"> <span>CM</span>
               </div>
             </div>
-              <button class="btn btn-info w-full text-white text-lg">Calculate</button>
+
+              <div class="mt-6">
+              <p>Area : <span id="rectangle-area">0 </span> CM<sup>2</sup></p>
+             </div>
+              <button onclick="rectangleArea()" class="btn btn-info w-full text-white text-lg">Calculate</button>
           </div>
         </div>
 
@@ -174,12 +182,16 @@
 
       <div class="col-span-1 p-4 md:p-8 border shadow-md rounded-sm" >
         <h4 class="text-xl text-center font-bold underline mt-3">Area Calculation</h4>
+
+        <ol class="" id="lists">
+
+        </ol>
       </div>
     </div>
   </main>
 
 
-
+<script src="./script.js"></script>
 </body>
 
 </html>
